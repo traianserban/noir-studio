@@ -31,13 +31,13 @@ footer{padding:30px 0 42px;border-top:1px solid var(--line);color:#8b8078;font-s
 @media(min-width:760px){.wrap{padding:0 36px}.menu{display:none}.navlinks{display:flex}.hero{min-height:760px}.services{grid-template-columns:1fr 1fr}.people{grid-template-columns:repeat(3,1fr)}.person{min-height:340px}.gallery{grid-template-columns:2fr 1fr 1fr}.gallery img,.gallery img:first-child{height:260px}.gallery img:first-child{grid-row:span 1;grid-column:auto}.steps{grid-template-columns:repeat(4,1fr)}.info{grid-template-columns:repeat(3,1fr)}}
 @keyframes spin{to{transform:rotate(360deg)}} @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}} .hero .wrap>*{animation:rise .7s both}.hero .wrap>*:nth-child(2){animation-delay:.08s}.hero .wrap>*:nth-child(3){animation-delay:.16s}.hero .wrap>*:nth-child(4){animation-delay:.24s}.hero .wrap>*:nth-child(5){animation-delay:.32s}.video-card{margin-top:24px;border-radius:18px;overflow:hidden;position:relative;height:180px;background:#2d2520}.video-card video{width:100%;height:100%;object-fit:cover;display:block}.sound-toggle{position:absolute;right:14px;bottom:14px;border:1px solid #ffffff80;background:#ffffffeb;color:#2b2420;border-radius:999px;padding:10px 13px;font-weight:700;font-size:12px;cursor:pointer;z-index:2;box-shadow:0 5px 18px #0002}.video-card:after{content:"SHOWREEL • NOIR STUDIO";position:absolute;left:18px;bottom:16px;background:#f3eadf;color:#332a25;padding:10px 14px;border-radius:999px;font-size:10px;font-weight:700;letter-spacing:.12em}.float-book{position:fixed;right:16px;bottom:18px;z-index:30;background:var(--accent);color:#fff;padding:13px 18px;border-radius:999px;font-weight:700;font-size:13px;box-shadow:0 8px 30px #e86f4540}@media(min-width:760px){.video-card{height:260px}} 
 .reviews{display:grid;gap:12px;margin-top:28px}.review{background:#fbf6f0;border:1px solid #d8c8b9;border-radius:18px;padding:20px;color:#2b2420}.stars{color:#e86f45;letter-spacing:.12em;font-size:14px}.review p{line-height:1.65;margin:12px 0 16px;color:#5d5149}.review b{display:block;font-size:14px}.review small{color:#91867e}.rating{margin-top:18px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}.rating strong{font:600 44px "Playfair Display",serif;color:#e86f45}.rating span{font-size:15px;color:#766d66}.rating div{width:100%;color:#766d66;font-size:12px}.community{display:grid;gap:12px;margin-top:28px}.community-card{border:1px solid #eadfd6;border-radius:18px;padding:22px;background:#fff}.community-card span{font-size:11px;color:#e86f45;font-weight:700}.community-card h3{font:600 25px "Playfair Display",serif;margin:12px 0 8px}.community-card p{color:#766d66;line-height:1.6;font-size:14px}.community-card a{color:#e86f45;font-weight:700;font-size:13px}@media(min-width:760px){.reviews{grid-template-columns:repeat(3,1fr)}.community{grid-template-columns:repeat(3,1fr)}}
-</style>
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}.video-card video{background:#2d2520}.video-error{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;color:#f5f0e8;background:#2d2520;font-size:13px;line-height:1.5;z-index:1}.video-error[hidden]{display:none}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}\n</style>
 </head>
 <body>
 <header><div class="wrap nav"><a class="logo" href="#">NOIR<span>.</span>STUDIO</a><nav class="navlinks"><a href="#servicii">Servicii</a><a href="#echipa">Echipă</a><a href="#galerie">Galerie</a><a href="#recenzii">Recenzii</a><a href="#comunitate">Comunitate</a><a href="#programare">Programare</a></nav><button class="menu" onclick="document.querySelector('.navlinks').classList.toggle('open')">☰</button></div></header>
 
 <main>
-<section class="hero"><div class="wrap"><div class="kicker">FRIZERIE • COAFURĂ</div><h1>Stilul tău.<br>Semnătura noastră.</h1><p>Un spațiu modern pentru tuns, styling și momente în care timpul petrecut pentru tine chiar contează.</p><a class="btn primary" href="#programare">Fă o programare →</a><a class="btn secondary" href="#servicii">Vezi serviciile</a><div class="video-card" aria-label="Showreel demo"><video autoplay muted loop playsinline preload="auto"><source src="showreel.mp4" type="video/mp4"></video></div></div></section>
+<section class="hero"><div class="wrap"><div class="kicker">FRIZERIE • COAFURĂ</div><h1>Stilul tău.<br>Semnătura noastră.</h1><p>Un spațiu modern pentru tuns, styling și momente în care timpul petrecut pentru tine chiar contează.</p><a class="btn primary" href="#programare">Fă o programare →</a><a class="btn secondary" href="#servicii">Vezi serviciile</a><div class="video-card" aria-label="Showreel demo"><video id="showreel" autoplay muted loop playsinline preload="auto" poster="showreel-poster.jpg"><source src="showreel.mp4" type="video/mp4"></video><button id="soundToggle" class="sound-toggle" type="button">🔇 Sunet</button><div id="videoError" class="video-error" hidden>Showreel-ul nu s-a putut încărca.<br>Reîncărcați pagina pentru a încerca din nou.</div></div></div></section>
 
 <section id="servicii"><div class="wrap"><div class="eyebrow">Servicii</div><h2 class="title">Simplu. Precis. Fără timp pierdut.</h2><p class="intro">Servicii clare, durate transparente și prețuri afișate înainte de programare.</p>
 <div class="services">
@@ -101,25 +101,91 @@ footer{padding:30px 0 42px;border-top:1px solid var(--line);color:#8b8078;font-s
 <footer><div class="wrap foot"><span>© 2026 NOIR Studio — DEMO</span><span>Concept demonstrativ</span></div></footer>
 <div class="toast" id="toast">Programarea demo a fost înregistrată.</div><a class="float-book" href="#programare">PROGRAMARE</a>
 <script>
+const showreel = document.getElementById('showreel');
+const soundToggle = document.getElementById('soundToggle');
+const videoError = document.getElementById('videoError');
 
-const showreel=document.getElementById('showreel');
-const soundToggle=document.getElementById('soundToggle');
-if(showreel && soundToggle){
-  soundToggle.addEventListener('click',()=>{
-    showreel.muted=!showreel.muted;
-    soundToggle.textContent=showreel.muted?'🔇 Sunet':'🔊 Sunet activ';
-    if(!showreel.muted) showreel.play().catch(()=>{});
-  });
-  showreel.addEventListener('click',()=>{
-    if(showreel.muted){
-      showreel.muted=false;
-      soundToggle.textContent='🔊 Sunet activ';
-      showreel.play().catch(()=>{});
+if (showreel && soundToggle) {
+  showreel.muted = true;
+
+  soundToggle.addEventListener('click', async (event) => {
+    event.stopPropagation();
+    try {
+      showreel.muted = !showreel.muted;
+      if (!showreel.muted) await showreel.play();
+      soundToggle.textContent = showreel.muted ? '🔇 Sunet' : '🔊 Sunet activ';
+    } catch (e) {
+      showreel.muted = true;
+      soundToggle.textContent = '🔇 Sunet';
     }
+  });
+
+  showreel.addEventListener('click', async () => {
+    if (showreel.muted) {
+      try {
+        showreel.muted = false;
+        await showreel.play();
+        soundToggle.textContent = '🔊 Sunet activ';
+      } catch (e) {
+        showreel.muted = true;
+      }
+    }
+  });
+
+  showreel.addEventListener('error', () => {
+    if (videoError) videoError.hidden = false;
+  });
+
+  showreel.addEventListener('loadeddata', () => {
+    if (videoError) videoError.hidden = true;
   });
 }
 
-document.querySelectorAll('.gallery img').forEach(img=>img.addEventListener('click',()=>{const overlay=document.createElement('div');overlay.style='position:fixed;inset:0;background:#2b2420dd;z-index:100;display:flex;align-items:center;justify-content:center;padding:20px';overlay.innerHTML='<img src="'+img.src+'" style="max-width:100%;max-height:90%;border-radius:18px">';overlay.onclick=()=>overlay.remove();document.body.appendChild(overlay)}));
-function confirmBooking(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2800)}
+// Mobile menu.
+const menu = document.querySelector('.menu');
+const nav = document.querySelector('.navlinks');
+if (menu && nav) {
+  menu.addEventListener('click', () => nav.classList.toggle('open'));
+}
+
+// Real scroll animations for sections/cards.
+const revealTargets = document.querySelectorAll(
+  'section:not(.hero), .service, .person, .gallery img, .booking, .review, .community-card, .infocard'
+);
+revealTargets.forEach((el, i) => {
+  el.classList.add('reveal');
+  el.style.transitionDelay = Math.min((i % 4) * 70, 210) + 'ms';
+});
+
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealTargets.forEach(el => observer.observe(el));
+} else {
+  revealTargets.forEach(el => el.classList.add('visible'));
+}
+
+// Gallery lightbox.
+document.querySelectorAll('.gallery img').forEach(img => {
+  img.addEventListener('click', () => {
+    const overlay = document.createElement('div');
+    overlay.style = 'position:fixed;inset:0;background:#2b2420dd;z-index:100;display:flex;align-items:center;justify-content:center;padding:20px';
+    overlay.innerHTML = '<img src="' + img.src + '" style="max-width:100%;max-height:90%;border-radius:18px">';
+    overlay.onclick = () => overlay.remove();
+    document.body.appendChild(overlay);
+  });
+});
+
+function confirmBooking() {
+  const t = document.getElementById('toast');
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2800);
+}
 </script>
 </body></html>
