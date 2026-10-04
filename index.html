@@ -201,15 +201,39 @@ document.querySelectorAll('.photo-carousel').forEach(wrapper => {
   });
 
   let normalizeTimer;
+  let autoplayTimer;
+
   carousel.addEventListener('scroll', () => {
     clearTimeout(normalizeTimer);
     normalizeTimer = setTimeout(normalize, 90);
   });
 
+  const startAutoplay = () => {
+    clearInterval(autoplayTimer);
+    if (window.innerWidth >= 760 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    autoplayTimer = setInterval(() => {
+      index = realIndex() + 1;
+      goTo(index);
+    }, 3500);
+  };
+
+  const pauseAutoplay = () => clearInterval(autoplayTimer);
+
+  carousel.addEventListener('pointerdown', pauseAutoplay);
+  carousel.addEventListener('pointerup', startAutoplay);
+  carousel.addEventListener('pointercancel', startAutoplay);
+  prev.addEventListener('mouseenter', pauseAutoplay);
+  next.addEventListener('mouseenter', pauseAutoplay);
+  prev.addEventListener('mouseleave', startAutoplay);
+  next.addEventListener('mouseleave', startAutoplay);
+
   window.addEventListener('resize', () => {
     measure();
     goTo(realIndex(), false);
+    startAutoplay();
   });
+
+  startAutoplay();
 });
 
 // Scroll reveal for sections, cards and images.
