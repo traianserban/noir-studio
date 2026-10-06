@@ -39,6 +39,12 @@ section{padding:74px 0}.eyebrow{color:var(--accent);font-size:11px;letter-spacin
 .stack-carousel .services .service.stack-hidden{transform:translateY(45px) scale(.955)}
 .stack-carousel .reviews{height:215px}
 .stack-carousel .reviews .review{height:203px;padding:12px 20px}
+.stack-carousel .stack-color-1{background:#fff3e8!important;border-color:#c95f3d!important}
+.stack-carousel .stack-color-2{background:#e8eee8!important;border-color:#829482!important}
+.stack-carousel .stack-color-3{background:#e9e5f0!important;border-color:#8d829f!important}
+.stack-carousel .stack-color-4{background:#f1eadf!important;border-color:#a8947e!important}
+.stack-carousel .stack-color-5{background:#e6eef2!important;border-color:#7f98a6!important}
+.stack-carousel .stack-color-6{background:#f0e6eb!important;border-color:#9d7f8c!important}
 .stack-carousel .reviews .review.stack-middle{transform:translateY(30px) scale(.985)}
 .stack-carousel .reviews .review.stack-back{transform:translateY(60px) scale(.97)}
 .stack-carousel .reviews .review.stack-hidden{transform:translateY(84px) scale(.955)}
@@ -47,10 +53,10 @@ section{padding:74px 0}.eyebrow{color:var(--accent);font-size:11px;letter-spacin
 .stack-carousel .services .service .price{font-size:16px}
 .stack-carousel .community{height:215px}
 .stack-carousel .community-card{height:195px}
-.stack-carousel .community-card.stack-top{background:#fff3e8;color:#332a25;border-color:#c95f3d}
-.stack-carousel .community-card.stack-middle{background:#e8eee8;color:#332a25;border-color:#829482}
-.stack-carousel .community-card.stack-back{background:#e9e5f0;color:#332a25;border-color:#8d829f}
-.stack-carousel .community-card.stack-hidden{background:#eee8df;color:#332a25}
+.stack-carousel .community-card.stack-top{color:#332a25}
+.stack-carousel .community-card.stack-middle{color:#332a25}
+.stack-carousel .community-card.stack-back{color:#332a25}
+.stack-carousel .community-card.stack-hidden{color:#332a25}
 
 @media(min-width:760px){.stack-carousel .services,.stack-carousel .reviews{height:auto;display:grid;position:static;overflow:visible;padding:0}.stack-carousel .service,.stack-carousel .review{position:static;width:auto;height:auto;transform:none!important;opacity:1!important;cursor:default}}
 .stack-carousel .community{position:relative;height:286px;display:block;overflow:hidden;padding:0 34px 4px}
@@ -325,6 +331,10 @@ document.querySelectorAll('.stack-carousel').forEach(wrapper => {
 
   const cards = [...stack.children];
   if (cards.length < 2) return;
+
+  cards.forEach((card, i) => {
+    card.classList.add('stack-color-' + ((i % 6) + 1));
+  });
 
   let current = 0;
   let startX = 0;
