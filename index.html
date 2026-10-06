@@ -25,6 +25,14 @@ section{padding:74px 0}.eyebrow{color:var(--accent);font-size:11px;letter-spacin
 .gallery{display:flex;gap:8px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:0 34px 4px}.gallery::-webkit-scrollbar{display:none}.gallery img{flex:0 0 78vw;width:78vw;height:240px;object-fit:cover;border-radius:14px;display:block;scroll-snap-align:center}.gallery img:first-child{grid-column:auto;height:240px}
 .info{display:grid;gap:12px;margin-top:28px}.infocard{border:1px solid var(--line);border-radius:16px;padding:18px;background:var(--card)}.infocard b{font-size:14px}.infocard p{color:var(--muted);margin:7px 0 0;line-height:1.5;font-size:14px}
 .map-card{margin-top:14px;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#ddd}.map-card iframe{display:block;width:100%;height:320px;border:0}.map-link-wrap{margin-top:14px}\n.reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}.reveal.is-visible{opacity:1;transform:none}.reveal[data-delay="1"]{transition-delay:.08s}.reveal[data-delay="2"]{transition-delay:.16s}.reveal[data-delay="3"]{transition-delay:.24s}.reveal[data-delay="4"]{transition-delay:.32s}.reveal[data-delay="5"]{transition-delay:.40s}@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}footer{padding:30px 0 42px;border-top:1px solid var(--line);color:#8b8078;font-size:12px}.foot{display:flex;justify-content:space-between;gap:20px}
+.stack-carousel .services,.stack-carousel .reviews{position:relative;height:286px;display:block;overflow:hidden;padding:0 34px 4px}
+.stack-carousel .service,.stack-carousel .review{position:absolute;left:34px;right:34px;top:0;width:auto;height:270px;transition:transform .35s ease,opacity .35s ease,box-shadow .35s ease;touch-action:pan-y;cursor:grab}
+.stack-carousel .service.stack-top,.stack-carousel .review.stack-top{transform:translateY(0) scale(1);z-index:3;opacity:1}
+.stack-carousel .service.stack-middle,.stack-carousel .review.stack-middle{transform:translateY(12px) scale(.965);z-index:2;opacity:.96}
+.stack-carousel .service.stack-back,.stack-carousel .review.stack-back{transform:translateY(24px) scale(.93);z-index:1;opacity:.9}
+.stack-carousel .service.stack-hidden,.stack-carousel .review.stack-hidden{transform:translateY(34px) scale(.9);z-index:0;opacity:0}
+.stack-carousel .service.dragging,.stack-carousel .review.dragging{transition:none;cursor:grabbing}
+@media(min-width:760px){.stack-carousel .services,.stack-carousel .reviews{height:auto;display:grid;position:static;overflow:visible;padding:0}.stack-carousel .service,.stack-carousel .review{position:static;width:auto;height:auto;transform:none!important;opacity:1!important;cursor:default}}
 .stack-carousel .community{position:relative;height:286px;display:block;overflow:hidden;padding:0 34px 4px}
 .stack-carousel .community-card{position:absolute;left:34px;right:34px;top:0;width:auto;height:270px;transition:transform .35s ease,opacity .35s ease,box-shadow .35s ease;touch-action:pan-y;cursor:grab}
 .stack-carousel .community-card.stack-top{transform:translateY(0) scale(1);z-index:3;opacity:1}
@@ -47,7 +55,7 @@ section{padding:74px 0}.eyebrow{color:var(--accent);font-size:11px;letter-spacin
 <section class="hero"><div class="wrap"><div class="kicker" style="color:#f4b69c">FRIZERIE • COAFURĂ</div><h1>Stilul tău.<br>Semnătura noastră.</h1><p>Un spațiu modern pentru tuns, styling și momente în care timpul petrecut pentru tine chiar contează.</p><a class="btn primary" href="#contact">Contactează-ne →</a><a class="btn secondary" href="#servicii">Vezi serviciile</a></div></section>
 
 <section id="servicii"><div class="wrap"><div class="eyebrow">Servicii</div><h2 class="title">Simplu. Precis. Fără timp pierdut.</h2><p class="intro">Servicii clare, durate transparente și prețuri afișate înainte de programare.</p>
-<div class="photo-carousel"><button class="carousel-arrow carousel-prev" type="button" aria-label="Serviciul anterior">‹</button><div class="services">
+<div class="photo-carousel stack-carousel"><button class="carousel-arrow carousel-prev" type="button" aria-label="Serviciul anterior">‹</button><div class="services">
 <div class="service reveal"><div><strong>Tuns bărbați</strong><small>30 min</small></div><span class="price">60 lei</span></div>
 <div class="service reveal"><div><strong>Tuns + barbă</strong><small>45 min</small></div><span class="price">85 lei</span></div>
 <div class="service reveal"><div><strong>Skin fade</strong><small>45 min</small></div><span class="price">75 lei</span></div>
@@ -74,7 +82,7 @@ section{padding:74px 0}.eyebrow{color:var(--accent);font-size:11px;letter-spacin
 <section id="recenzii" class="darkband"><div class="wrap">
 <div class="eyebrow">Recenzii</div>
 <h2 class="title">Clienții spun cel mai bine povestea.</h2>
-<div class="photo-carousel"><button class="carousel-arrow carousel-prev" type="button" aria-label="Recenzia anterioară">‹</button><div class="reviews">
+<div class="photo-carousel stack-carousel"><button class="carousel-arrow carousel-prev" type="button" aria-label="Recenzia anterioară">‹</button><div class="reviews">
 <div class="review reveal"><div class="stars">★★★★★</div><p>„În sfârșit un salon unde programarea chiar respectă ora stabilită. Tunsul a ieșit exact cum am cerut.”</p><b>Andrei M.</b><small>Client</small></div>
 <div class="review reveal"><div class="stars">★★★★★</div><p>„Atmosferă foarte plăcută, oameni atenți și rezultate excelente. Revin cu siguranță.”</p><b>Elena P.</b><small>Clientă</small></div>
 <div class="review reveal"><div class="stars">★★★★★</div><p>„Îmi place că pot vedea serviciile și pot face programarea direct de pe telefon.”</p><b>Radu C.</b><small>Client</small></div>
@@ -287,9 +295,9 @@ document.querySelectorAll('.photo-carousel').forEach(wrapper => {
   startAutoplay();
 });
 
-// Community cards: mobile stack with swipe, tap indicators and a visible peek of the next cards.
+// Stacked information cards: mobile stack with swipe, tap indicators and a visible peek of the next cards.
 document.querySelectorAll('.stack-carousel').forEach(wrapper => {
-  const stack = wrapper.querySelector('.community');
+  const stack = wrapper.querySelector('.community, .services, .reviews');
   const indicators = wrapper.querySelector('.carousel-indicators');
   const prev = wrapper.querySelector('.carousel-prev');
   const next = wrapper.querySelector('.carousel-next');
