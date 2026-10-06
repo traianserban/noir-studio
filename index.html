@@ -32,10 +32,10 @@ section{padding:74px 0}.eyebrow{color:var(--accent);font-size:11px;letter-spacin
 }\n</style>
 </head>
 <body>
-<header><div class="wrap nav"><a class="logo" href="#">NOIR<span>.</span>STUDIO</a><nav class="navlinks"><a href="#servicii">Servicii</a><a href="#echipa">Echipă</a><a href="#galerie">Galerie</a><a href="#recenzii">Recenzii</a><a href="#comunitate">Comunitate</a><a href="#programare">Programare</a></nav><button class="menu" onclick="document.querySelector('.navlinks').classList.toggle('open')">☰</button></div></header>
+<header><div class="wrap nav"><a class="logo" href="#">NOIR<span>.</span>STUDIO</a><nav class="navlinks"><a href="#servicii">Servicii</a><a href="#echipa">Echipă</a><a href="#galerie">Galerie</a><a href="#recenzii">Recenzii</a><a href="#comunitate">Comunitate</a><a href="#contact">Contact</a></nav><button class="menu" onclick="document.querySelector('.navlinks').classList.toggle('open')">☰</button></div></header>
 
 <main>
-<section class="hero"><div class="wrap"><div class="kicker" style="color:#f4b69c">FRIZERIE • COAFURĂ</div><h1>Stilul tău.<br>Semnătura noastră.</h1><p>Un spațiu modern pentru tuns, styling și momente în care timpul petrecut pentru tine chiar contează.</p><a class="btn primary" href="#programare">Fă o programare →</a><a class="btn secondary" href="#servicii">Vezi serviciile</a></div></section>
+<section class="hero"><div class="wrap"><div class="kicker" style="color:#f4b69c">FRIZERIE • COAFURĂ</div><h1>Stilul tău.<br>Semnătura noastră.</h1><p>Un spațiu modern pentru tuns, styling și momente în care timpul petrecut pentru tine chiar contează.</p><a class="btn primary" href="#contact">Contactează-ne →</a><a class="btn secondary" href="#servicii">Vezi serviciile</a></div></section>
 
 <section id="servicii"><div class="wrap"><div class="eyebrow">Servicii</div><h2 class="title">Simplu. Precis. Fără timp pierdut.</h2><p class="intro">Servicii clare, durate transparente și prețuri afișate înainte de programare.</p>
 <div class="photo-carousel"><button class="carousel-arrow carousel-prev" type="button" aria-label="Serviciul anterior">‹</button><div class="services">
@@ -59,13 +59,7 @@ section{padding:74px 0}.eyebrow{color:var(--accent);font-size:11px;letter-spacin
 <img class="reveal" src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=700&q=85" alt="Salon">
 </div><div class="carousel-indicators" aria-label="Indicatori galerie"></div><button class="carousel-arrow carousel-next" type="button" aria-label="Poza următoare">›</button></div></div></section>
 
-<section class="darkband" id="programare"><div class="wrap"><div class="eyebrow">Programare online</div><h2 class="title">Alegi. Confirmi. Gata.</h2><p class="intro">Demo de programare — în versiunea reală, disponibilitatea poate fi conectată direct la <strong class="brand-highlight">STARE DE TOT</strong>.</p>
-<div class="booking"><div class="steps">
-<div class="field"><label>Serviciu</label><select><option>Tuns bărbați — 60 lei</option><option>Tuns + barbă — 85 lei</option><option>Skin fade — 75 lei</option><option>Tuns femei — 90 lei</option><option>Coafat — 80 lei</option></select></div>
-<div class="field"><label>Specialist</label><select><option>Alex — Barber</option><option>Maria — Hairstylist</option><option>Andreea — Colorist</option></select></div>
-<div class="field"><label>Data</label><input id="bookingDate" type="date" onclick="this.showPicker && this.showPicker()" onfocus="this.showPicker && this.showPicker()"></div>
-<div class="field"><label>Ora</label><select><option>09:00</option><option>09:30</option><option>10:00</option><option>10:30</option><option>11:00</option><option>11:30</option><option>12:00</option><option>14:00</option><option>14:30</option><option>15:00</option><option>16:00</option><option>16:30</option><option>17:00</option></select></div>
-</div><button class="btn primary" style="width:100%;margin-top:16px" onclick="confirmBooking()">Confirmă programarea</button></div></div></section>
+
 
 
 <section id="recenzii" class="darkband"><div class="wrap">
@@ -84,13 +78,13 @@ section{padding:74px 0}.eyebrow{color:var(--accent);font-size:11px;letter-spacin
 <h2 class="title">Mai mult decât un salon.</h2>
 <p class="intro">Un loc în care oamenii revin, se cunosc și fac parte din aceeași comunitate.</p>
 <div class="photo-carousel"><button class="carousel-arrow carousel-prev" type="button" aria-label="Card anterior">‹</button><div class="community">
-<div class="community-card reveal"><span>01</span><h3>NOIR Club</h3><p>Avantaje pentru clienții care aleg să revină constant: prioritate la programări și oferte dedicate.</p><a href="#programare">Intră în club →</a></div>
+<div class="community-card reveal"><span>01</span><h3>NOIR Club</h3><p>Avantaje pentru clienții care aleg să revină constant: prioritate la programări și oferte dedicate.</p><a href="#contact">Află mai multe →</a></div>
 <div class="community-card reveal"><span>02</span><h3>Inspirație</h3><p>Idei de tunsori, coafuri, îngrijire și recomandări publicate săptămânal.</p><a href="#galerie">Vezi inspirația →</a></div>
 <div class="community-card reveal"><span>03</span><h3>Recomandă un prieten</h3><p>Invită pe cineva nou în comunitate și transformați următoarea vizită într-o experiență împreună.</p><a href="#programare">Descoperă →</a></div>
 </div><div class="carousel-indicators" aria-label="Indicatori comunitate"></div><button class="carousel-arrow carousel-next" type="button" aria-label="Card următor">›</button></div>
 </div></section>
 
-<section><div class="wrap"><div class="eyebrow">Ne găsești aici</div><h2 class="title">Ne găsești aici.</h2><div class="info">
+<section id="contact"><div class="wrap"><div class="eyebrow">Ne găsești aici</div><h2 class="title">Ne găsești aici.</h2><div class="info">
 <div class="infocard reveal"><b>Adresă</b><p>Tătărani, Prahova — lângă Ploiești</p></div>
 <div class="infocard reveal"><b>Program</b><p>Luni–Vineri: 09:00–20:00<br>Sâmbătă: 09:00–16:00</p></div>
 <div class="infocard reveal"><b>Contact</b><p>0722 000 000<br>WhatsApp disponibil</p></div>
@@ -103,7 +97,7 @@ section{padding:74px 0}.eyebrow{color:var(--accent);font-size:11px;letter-spacin
   referrerpolicy="no-referrer-when-downgrade">
 </iframe>
 </div>
-<div class="map-link-wrap"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Tatarani%2C%20Prahova%2C%20Romania" target="_blank" rel="noopener">Deschide harta →</a>
+<div class="map-link-wrap"><a class="btn primary" href="https://wa.me/40722000000" target="_blank" rel="noopener">Scrie pe WhatsApp →</a>
 </div></section>
 </main>
 <footer><div class="wrap foot"><span>© 2026 NOIR Studio — DEMO</span><span>Concept demonstrativ</span></div></footer>
@@ -316,10 +310,5 @@ if (revealItems.length && !window.matchMedia('(prefers-reduced-motion: reduce)')
   revealItems.forEach(el => el.classList.add('is-visible'));
 }
 
-function confirmBooking() {
-  const t = document.getElementById('toast');
-  t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 2800);
-}
 </script>
 </body></html>
