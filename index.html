@@ -147,8 +147,15 @@ document.querySelectorAll('.photo-carousel').forEach(wrapper => {
   const originals = [...carousel.children];
   if (originals.length < 2) return;
 
-  originals.forEach(el => carousel.appendChild(el.cloneNode(true)));
-  originals.slice().reverse().forEach(el => carousel.insertBefore(el.cloneNode(true), carousel.firstChild));
+  const makeClone = (el) => {
+    const clone = el.cloneNode(true);
+    clone.classList.remove('reveal', 'is-visible');
+    clone.removeAttribute('data-delay');
+    return clone;
+  };
+
+  originals.forEach(el => carousel.appendChild(makeClone(el)));
+  originals.slice().reverse().forEach(el => carousel.insertBefore(makeClone(el), carousel.firstChild));
 
   let index = originals.length;
   let itemWidth = 0;
@@ -217,6 +224,8 @@ document.querySelectorAll('.photo-carousel').forEach(wrapper => {
 
   let normalizeTimer;
   let autoplayTimer;
+  let resumeTimer;
+  let isUserInteracting = false;
 
   carousel.addEventListener('scroll', () => {
     clearTimeout(normalizeTimer);
@@ -225,20 +234,53 @@ document.querySelectorAll('.photo-carousel').forEach(wrapper => {
   });
 
   const startAutoplay = () => {
-    clearInterval(autoplayTimer);
-    if (window.innerWidth >= 760 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    autoplayTimer = setInterval(() => {
-      index = realIndex() + 1;
+    clearTimeout(autoplayTimer);
+    clearTimeout(resumeTimer);
+    if (window.innerWidth >= 760 || window.matchMedia('(prefers-reduced-motion: reduce)').matches || isUserInteracting) return;
+
+    const tick = () => {
+      if (window.innerWidth >= 760 || document.hidden || isUserInteracting) return;
+      const current = realIndex();
+      index = current + 1;
       goTo(index);
       updateIndicators();
-    }, 3500);
+      autoplayTimer = setTimeout(tick, 4200);
+    };
+
+    autoplayTimer = setTimeout(tick, 3000);
   };
 
-  const pauseAutoplay = () => clearInterval(autoplayTimer);
+  const pauseAutoplay = () => {
+    clearTimeout(autoplayTimer);
+    clearTimeout(resumeTimer);
+  };
 
-  carousel.addEventListener('pointerdown', pauseAutoplay);
-  carousel.addEventListener('pointerup', startAutoplay);
-  carousel.addEventListener('pointercancel', startAutoplay);
+  const resumeAutoplay = () => {
+    clearTimeout(resumeTimer);
+    resumeTimer = setTimeout(() => {
+      isUserInteracting = false;
+      startAutoplay();
+    }, 1200);
+  };
+
+  carousel.addEventListener('pointerdown', () => {
+    isUserInteracting = true;
+    pauseAutoplay();
+  });
+  carousel.addEventListener('pointerup', resumeAutoplay);
+  carousel.addEventListener('pointercancel', resumeAutoplay);
+  carousel.addEventListener('pointerleave', () => {
+    if (isUserInteracting) resumeAutoplay();
+  });
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      pauseAutoplay();
+    } else {
+      isUserInteracting = false;
+      startAutoplay();
+    }
+  });
 
   window.addEventListener('resize', () => {
     measure();
