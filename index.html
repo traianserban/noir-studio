@@ -24,7 +24,8 @@ section{padding:74px 0}.eyebrow{color:var(--accent);font-size:11px;letter-spacin
 .darkband{background:#e7d5c4;border-top:1px solid #d8c8b9;border-bottom:1px solid #d8c8b9}.photo-carousel{position:relative;margin-top:28px}.carousel-arrow{display:none}.carousel-indicators{display:flex;align-items:center;justify-content:center;gap:6px;margin:10px auto 0;height:10px}.carousel-indicator{width:5px;height:5px;border:0;border-radius:999px;background:#9b8f86;padding:0;opacity:.55;transition:width .25s ease,opacity .25s ease,background .25s ease;cursor:pointer}.carousel-indicator.active{width:18px;opacity:1;background:var(--accent)}.people{display:flex;gap:14px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:0 34px 4px}.people::-webkit-scrollbar{display:none}.person{position:relative;flex:0 0 78vw;min-height:260px;border-radius:18px;overflow:hidden;background-size:cover;background-position:center;scroll-snap-align:center}.person:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.88))}.person div{position:absolute;z-index:1;left:16px;bottom:16px}.person b{font:500 22px "Playfair Display",serif}.person span{display:block;color:#eee7df;font-size:12px;margin-top:4px}
 .gallery{display:flex;gap:8px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:0 34px 4px}.gallery::-webkit-scrollbar{display:none}.gallery img{flex:0 0 78vw;width:78vw;height:240px;object-fit:cover;border-radius:14px;display:block;scroll-snap-align:center}.gallery img:first-child{grid-column:auto;height:240px}
 .info{display:grid;gap:12px;margin-top:28px}.infocard{border:1px solid var(--line);border-radius:16px;padding:18px;background:var(--card)}.infocard b{font-size:14px}.infocard p{color:var(--muted);margin:7px 0 0;line-height:1.5;font-size:14px}
-.map-card{margin-top:14px;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#ddd}.map-card iframe{display:block;width:100%;height:320px;border:0}.map-link-wrap{margin-top:14px}\n.reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}.reveal.is-visible{opacity:1;transform:none}.reveal[data-delay="1"]{transition-delay:.08s}.reveal[data-delay="2"]{transition-delay:.16s}.reveal[data-delay="3"]{transition-delay:.24s}.reveal[data-delay="4"]{transition-delay:.32s}.reveal[data-delay="5"]{transition-delay:.40s}@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}footer{padding:30px 0 42px;border-top:1px solid var(--line);color:#8b8078;font-size:12px}.foot{display:flex;justify-content:space-between;gap:20px}
+.map-card{margin-top:14px;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#ddd}.map-card iframe{display:block;width:100%;height:320px;border:0}.map-link-wrap{margin-top:14px}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}.reveal.is-visible{opacity:1;transform:none}.reveal[data-delay="1"]{transition-delay:.08s}.reveal[data-delay="2"]{transition-delay:.16s}.reveal[data-delay="3"]{transition-delay:.24s}.reveal[data-delay="4"]{transition-delay:.32s}.reveal[data-delay="5"]{transition-delay:.40s}@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}footer{padding:30px 0 42px;border-top:1px solid var(--line);color:#8b8078;font-size:12px}.foot{display:flex;justify-content:space-between;gap:20px}
 .stack-carousel .services,.stack-carousel .reviews{position:relative;height:215px;display:block;overflow:hidden;padding:0 5%;width:100%}
 .stack-carousel .service,.stack-carousel .review{position:absolute;left:5%;right:5%;top:0;width:90%;height:203px;transition:transform .35s ease,opacity .35s ease,box-shadow .35s ease;border:2px solid #8f8176;touch-action:pan-y;cursor:grab;background:#fbf6f0;color:#332a25}
 .stack-carousel .service.stack-top,.stack-carousel .review.stack-top{transform:translateY(0) scale(1);z-index:3;opacity:1;background:#fbf6f0;color:#332a25;box-shadow:0 8px 18px rgba(55,40,30,.16)}
@@ -52,46 +53,40 @@ section{padding:74px 0}.eyebrow{color:var(--accent);font-size:11px;letter-spacin
 .stack-carousel .stack-color-4{background:#f1eadf!important;border-color:#a8947e!important}
 .stack-carousel .stack-color-5{background:#e6eef2!important;border-color:#7f98a6!important}
 .stack-carousel .stack-color-6{background:#f0e6eb!important;border-color:#9d7f8c!important}
-.stack-carousel .reviews .review.stack-middle{transform:translateY(24px) scale(.985)}
-.stack-carousel .reviews .review.stack-back{transform:translateY(48px) scale(.97)}
-.stack-carousel .reviews .review.stack-hidden{transform:translateY(68px) scale(.955)}
 .stack-carousel .services .service strong{font-size:17px}
 .stack-carousel .services .service small{font-size:13px;margin-top:2px}
 .stack-carousel .services .service .price{font-size:16px}
-.stack-carousel .community{height:215px}
-.stack-carousel .community-card{height:195px}
+.stack-carousel .community{height:210px}
+.stack-carousel .community-card{height:150px}
 .stack-carousel .community-card.stack-top{color:#332a25}
 .stack-carousel .community-card.stack-middle{color:#332a25}
 .stack-carousel .community-card.stack-back{color:#332a25}
 .stack-carousel .community-card.stack-hidden{color:#332a25}
-
 @media(min-width:760px){.stack-carousel .services,.stack-carousel .reviews{height:auto;display:grid;position:static;overflow:visible;padding:0}.stack-carousel .service,.stack-carousel .review{position:static;width:auto;height:auto;transform:none!important;opacity:1!important;cursor:default}}
-.stack-carousel .community{position:relative;height:175px;display:block;overflow:hidden;padding:0 34px 4px}
-.stack-carousel .community-card{position:absolute;left:34px;right:34px;top:0;width:auto;height:150px;padding:8px 18px;transition:transform .35s ease,opacity .35s ease,box-shadow .35s ease;touch-action:pan-y;cursor:grab}
+.stack-carousel .community{position:relative;height:210px;display:block;overflow:hidden;padding:0 5% 4px}
+.stack-carousel .community-card{position:absolute;left:5%;right:5%;top:0;width:90%;height:150px;padding:8px 18px;transition:transform .35s ease,opacity .35s ease,box-shadow .35s ease;touch-action:pan-y;cursor:grab}
 .stack-carousel .community-card h3{font-size:21px;margin:0 0 4px}
 .stack-carousel .community-card p{font-size:13px;line-height:1.35;margin:0 0 5px}
 .stack-carousel .community-card a{font-size:13px}
 .stack-carousel .community-card.stack-top{transform:translateY(0) scale(1);z-index:3;opacity:1}
-.stack-carousel .community-card.stack-middle{transform:translateY(22px) scale(.985);z-index:2;opacity:.96}
-.stack-carousel .community-card.stack-back{transform:translateY(44px) scale(.97);z-index:1;opacity:.9}
-.stack-carousel .community-card.stack-middle > *,
-.stack-carousel .community-card.stack-back > *{opacity:0}
-.stack-carousel .community-card.stack-hidden{transform:translateY(58px) scale(.955);z-index:0;opacity:0}
+.stack-carousel .community-card.stack-middle{transform:translateY(24px) scale(.985);z-index:2;opacity:.96}
+.stack-carousel .community-card.stack-back{transform:translateY(48px) scale(.97);z-index:1;opacity:.9}
+.stack-carousel .community-card.stack-middle > *, .stack-carousel .community-card.stack-back > *{opacity:0}
+.stack-carousel .community-card.stack-hidden{transform:translateY(68px) scale(.955);z-index:0;opacity:0}
 .stack-carousel .community-card.dragging{transition:none;cursor:grabbing}
 .stack-carousel .carousel-indicators{display:flex}
-@media(min-width:760px){.stack-carousel .community{height:auto;display:grid;position:static;overflow:visible;padding:0}.stack-carousel .community-card{position:static;width:auto;height:auto;transform:none!important;opacity:1!important;cursor:default}.stack-carousel .carousel-indicators{display:none}}
+@media(min-width:760px){.stack-carousel .community{height:auto;display:grid;position:static;overflow:visible;padding:0}.stack-carousel .community-card{position:static;width:auto;height:auto;transform:none!important;opacity:1!important;cursor:default}.stack-carousel .community-card > *{opacity:1}.stack-carousel .carousel-indicators{display:none}}
 @media(min-width:760px){.wrap{padding:0 36px}.menu{display:none}.navlinks{display:flex}.hero{min-height:760px;height:760px}.services{display:grid;grid-template-columns:1fr 1fr;overflow:visible;padding:0}.photo-carousel{margin-top:28px}.carousel-arrow{display:none}.carousel-indicators{display:none}.people{display:grid;grid-template-columns:repeat(3,1fr);overflow:visible;padding:0}.person{flex:none;min-height:340px}.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;overflow:visible;padding:0}.gallery img{flex:none;width:100%;height:260px}.gallery img:first-child{grid-row:span 1;grid-column:auto;height:260px}.steps{grid-template-columns:repeat(4,1fr)}.info{grid-template-columns:repeat(3,1fr)}}
 } @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}} .hero .wrap>*{animation:rise .7s both}.hero .wrap>*:nth-child(2){animation-delay:.08s}.hero .wrap>*:nth-child(3){animation-delay:.16s}.hero .wrap>*:nth-child(4){animation-delay:.24s}.hero .wrap>*:nth-child(5){animation-delay:.32s}.video-card{margin-top:24px;border-radius:18px;overflow:hidden;position:relative;height:220px;background:#2d2520}.video-card video,.video-card img{width:100%;height:100%;object-fit:cover;display:block}.sound-toggle{position:absolute;right:14px;bottom:14px;border:1px solid #ffffff80;background:#ffffffeb;color:#2b2420;border-radius:999px;padding:10px 13px;font-weight:700;font-size:12px;cursor:pointer;z-index:2;box-shadow:0 5px 18px #0002}.float-book{position:fixed;right:16px;bottom:18px;z-index:30;background:var(--accent);color:#fff;padding:13px 18px;border-radius:999px;font-weight:700;font-size:13px;box-shadow:0 8px 30px #e86f4540}@media(min-width:760px){.video-card{height:300px}} 
 .reviews{display:flex;gap:12px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:0 34px 4px}.reviews::-webkit-scrollbar{display:none}.review{flex:0 0 78vw;scroll-snap-align:center}.review{background:#fbf6f0;border:1px solid #d8c8b9;border-radius:18px;padding:20px;color:#2b2420}.stars{color:#e86f45;letter-spacing:.12em;font-size:14px}.review p{line-height:1.65;margin:12px 0 16px;color:#5d5149}.review b{display:block;font-size:14px}.review small{color:#91867e}.rating{margin-top:18px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}.rating strong{font:600 44px "Playfair Display",serif;color:#e86f45}.rating span{font-size:15px;color:#766d66}.rating div{width:100%;color:#766d66;font-size:12px}.community{display:flex;gap:12px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:0 34px 4px}.community::-webkit-scrollbar{display:none}.community-card{flex:0 0 78vw;scroll-snap-align:center}.community-card{border:1px solid #eadfd6;border-radius:18px;padding:22px;background:#fff}.community-card span{font-size:11px;color:#e86f45;font-weight:700}.community-card h3{font:600 25px "Playfair Display",serif;margin:12px 0 8px}.community-card p{color:#766d66;line-height:1.6;font-size:14px}.community-card a{color:#e86f45;font-weight:700;font-size:13px}@media(min-width:760px){.reviews{display:grid;grid-template-columns:repeat(3,1fr);overflow:visible;padding:0}.review{flex:none}.community{display:grid;grid-template-columns:repeat(3,1fr);overflow:visible;padding:0}.community-card{flex:none}}
-}\n</style>
+}
+</style>
 </head>
 <body>
 <!-- booking-demo-removed -->
 <header><div class="wrap nav"><a class="logo" href="#">NOIR<span>.</span>STUDIO</a><nav class="navlinks"><a href="#servicii">Servicii</a><a href="#echipa">Echipă</a><a href="#galerie">Galerie</a><a href="#recenzii">Recenzii</a><a href="#comunitate">Comunitate</a><a href="#contact">Contact</a></nav><button class="menu" onclick="document.querySelector('.navlinks').classList.toggle('open')">☰</button></div></header>
-
 <main>
 <section class="hero"><div class="wrap"><div class="kicker" style="color:#f4b69c">FRIZERIE • COAFURĂ</div><h1>Stilul tău.<br>Semnătura noastră.</h1><p>Un spațiu modern pentru tuns, styling și momente în care timpul petrecut pentru tine chiar contează.</p><a class="btn primary" href="#contact">Contactează-ne →</a><a class="btn secondary" href="#servicii">Vezi serviciile</a></div></section>
-
 <section id="servicii"><div class="wrap"><div class="eyebrow">Servicii</div><h2 class="title">Simplu. Precis. Fără timp pierdut.</h2><p class="intro">Servicii clare, durate transparente și prețuri afișate înainte de programare.</p>
 <div class="photo-carousel stack-carousel"><button class="carousel-arrow carousel-prev" type="button" aria-label="Serviciul anterior">‹</button><div class="services">
 <div class="service reveal"><div><strong>Tuns bărbați</strong><small>30 min</small></div><span class="price">60 lei</span></div>
@@ -101,350 +96,81 @@ section{padding:74px 0}.eyebrow{color:var(--accent);font-size:11px;letter-spacin
 <div class="service reveal"><div><strong>Coafat</strong><small>45–60 min</small></div><span class="price">80 lei</span></div>
 <div class="service reveal"><div><strong>Vopsit</strong><small>90–150 min</small></div><span class="price">de la 180 lei</span></div>
 </div><div class="carousel-indicators" aria-label="Indicatori servicii"></div><button class="carousel-arrow carousel-next" type="button" aria-label="Serviciul următor">›</button></div></div></section>
-
 <section class="darkband" id="echipa"><div class="wrap"><div class="eyebrow">Echipă</div><h2 class="title">Oamenii din spatele stilului.</h2><div class="photo-carousel"><button class="carousel-arrow carousel-prev" type="button" aria-label="Poza anterioară">‹</button><div class="people">
 <div class="person reveal" style="background-image:url('https://images.unsplash.com/photo-1520338661084-680395057c93?auto=format&fit=crop&fm=jpg&q=85&w=1200')"><div><b>Alex</b><span>Frizer</span></div></div>
 <div class="person reveal" style="background-image:url('https://images.unsplash.com/photo-1673465766620-1f336d434bff?auto=format&fit=crop&w=1200&q=85')"><div><b>Maria</b><span>Hairstylist</span></div></div>
 <div class="person reveal" style="background-image:url('https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?auto=format&fit=crop&w=700&q=80')"><div><b>Andreea</b><span>Colorist</span></div></div>
 </div><div class="carousel-indicators" aria-label="Indicatori echipă"></div><button class="carousel-arrow carousel-next" type="button" aria-label="Poza următoare">›</button></div></div></section>
-
 <section id="galerie"><div class="wrap"><div class="eyebrow">Galerie</div><h2 class="title">Lucrări care vorbesc singure.</h2><div class="photo-carousel"><button class="carousel-arrow carousel-prev" type="button" aria-label="Poza anterioară">‹</button><div class="gallery">
 <img class="reveal" src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1000&q=85" alt="Frizerie">
 <img class="reveal" src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=700&q=85" alt="Coafură">
 <img class="reveal" src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=700&q=85" alt="Salon">
 </div><div class="carousel-indicators" aria-label="Indicatori galerie"></div><button class="carousel-arrow carousel-next" type="button" aria-label="Poza următoare">›</button></div></div></section>
-
-
-
-
-<section id="recenzii" class="darkband"><div class="wrap">
-<div class="eyebrow">Recenzii</div>
-<h2 class="title">Clienții spun cel mai bine povestea.</h2>
+<section id="recenzii" class="darkband"><div class="wrap"><div class="eyebrow">Recenzii</div><h2 class="title">Clienții spun cel mai bine povestea.</h2>
 <div class="photo-carousel stack-carousel"><button class="carousel-arrow carousel-prev" type="button" aria-label="Recenzia anterioară">‹</button><div class="reviews">
 <div class="review reveal"><div class="stars">★★★★★</div><p>„În sfârșit un salon unde programarea chiar respectă ora stabilită. Tunsul a ieșit exact cum am cerut.”</p><b>Andrei M.</b><small>Client</small></div>
 <div class="review reveal"><div class="stars">★★★★★</div><p>„Atmosferă foarte plăcută, oameni atenți și rezultate excelente. Revin cu siguranță.”</p><b>Elena P.</b><small>Clientă</small></div>
 <div class="review reveal"><div class="stars">★★★★★</div><p>„Îmi place că pot vedea serviciile și pot face programarea direct de pe telefon.”</p><b>Radu C.</b><small>Client</small></div>
 </div><div class="carousel-indicators" aria-label="Indicatori recenzii"></div><button class="carousel-arrow carousel-next" type="button" aria-label="Recenzia următoare">›</button></div>
-<div class="rating"><strong>4,9</strong><span>/ 5</span><div>din recenziile clienților NOIR Studio</div></div>
-</div></section>
-
-<section id="comunitate"><div class="wrap">
-<div class="eyebrow">Comunitate</div>
-<h2 class="title">Mai mult decât un salon.</h2>
-<p class="intro">Un loc în care oamenii revin, se cunosc și fac parte din aceeași comunitate.</p>
+<div class="rating"><strong>4,9</strong><span>/ 5</span><div>din recenziile clienților NOIR Studio</div></div></div></section>
+<section id="comunitate"><div class="wrap"><div class="eyebrow">Comunitate</div><h2 class="title">Mai mult decât un salon.</h2><p class="intro">Un loc în care oamenii revin, se cunosc și fac parte din aceeași comunitate.</p>
 <div class="photo-carousel stack-carousel"><button class="carousel-arrow carousel-prev" type="button" aria-label="Card anterior">‹</button><div class="community">
 <div class="community-card reveal"><span>01</span><h3>NOIR Club</h3><p>Avantaje pentru clienții care aleg să revină constant: prioritate la programări și oferte dedicate.</p><a href="#contact">Află mai multe →</a></div>
 <div class="community-card reveal"><span>02</span><h3>Inspirație</h3><p>Idei de tunsori, coafuri, îngrijire și recomandări publicate săptămânal.</p><a href="#galerie">Vezi inspirația →</a></div>
 <div class="community-card reveal"><span>03</span><h3>Recomandă un prieten</h3><p>Invită pe cineva nou în comunitate și transformați următoarea vizită într-o experiență împreună.</p><a href="#contact">Descoperă →</a></div>
-</div><div class="carousel-indicators" aria-label="Indicatori comunitate"></div><button class="carousel-arrow carousel-next" type="button" aria-label="Card următor">›</button></div>
-</div></section>
-
+</div><div class="carousel-indicators" aria-label="Indicatori comunitate"></div><button class="carousel-arrow carousel-next" type="button" aria-label="Card următor">›</button></div></div></section>
 <section id="contact"><div class="wrap"><div class="eyebrow">Ne găsești aici</div><h2 class="title">Ne găsești aici.</h2><div class="info">
 <div class="infocard reveal"><b>Adresă</b><p>Tătărani, Prahova — lângă Ploiești</p></div>
 <div class="infocard reveal"><b>Program</b><p>Luni–Vineri: 09:00–20:00<br>Sâmbătă: 09:00–16:00</p></div>
-<div class="infocard reveal"><b>Contact</b><p>0722 000 000<br>WhatsApp disponibil</p></div>
-</div>
-<div class="map-card reveal">
-<iframe
-  src="https://www.google.com/maps?q=Tatarani%2C%20Prahova%2C%20Romania&output=embed"
-  title="NOIR Studio - Tătărani, Prahova — lângă Ploiești"
-  loading="lazy"
-  referrerpolicy="no-referrer-when-downgrade">
-</iframe>
-</div>
-<div class="map-link-wrap"><a class="btn primary" href="https://wa.me/40722000000" target="_blank" rel="noopener">Scrie pe WhatsApp →</a>
-</div></section>
+<div class="infocard reveal"><b>Contact</b><p>0722 000 000<br>WhatsApp disponibil</p></div></div>
+<div class="map-card reveal"><iframe src="https://www.google.com/maps?q=Tatarani%2C%20Prahova%2C%20Romania&output=embed" title="NOIR Studio - Tătărani, Prahova — lângă Ploiești" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+<div class="map-link-wrap"><a class="btn primary" href="https://wa.me/40722000000" target="_blank" rel="noopener">Scrie pe WhatsApp →</a></div></section>
 </main>
 <footer><div class="wrap foot"><span>© 2026 NOIR Studio — DEMO</span><span>Concept demonstrativ</span></div></footer>
 <script>
-// Mobile menu.
-const menu = document.querySelector('.menu');
-const nav = document.querySelector('.navlinks');
-if (menu && nav) {
-  menu.addEventListener('click', () => nav.classList.toggle('open'));
-}
-
-// Gallery lightbox.
-document.querySelectorAll('.gallery img').forEach(img => {
-  img.addEventListener('click', () => {
-    const overlay = document.createElement('div');
-    overlay.style = 'position:fixed;inset:0;background:#2b2420dd;z-index:100;display:flex;align-items:center;justify-content:center;padding:20px';
-    overlay.innerHTML = '<img src="' + img.src + '" style="max-width:100%;max-height:90%;border-radius:18px">';
-    overlay.onclick = () => overlay.remove();
-    document.body.appendChild(overlay);
-  });
+const menu = document.querySelector('.menu'); const nav = document.querySelector('.navlinks');
+if(menu&&nav) menu.addEventListener('click',()=>nav.classList.toggle('open'));
+document.querySelectorAll('.gallery img').forEach(img=>img.addEventListener('click',()=>{const overlay=document.createElement('div');overlay.style='position:fixed;inset:0;background:#2b2420dd;z-index:100;display:flex;align-items:center;justify-content:center;padding:20px';overlay.innerHTML='<img src="'+img.src+'" style="max-width:100%;max-height:90%;border-radius:18px">';overlay.onclick=()=>overlay.remove();document.body.appendChild(overlay)}));
+document.querySelectorAll('.photo-carousel').forEach(wrapper=>{
+ if(wrapper.classList.contains('stack-carousel'))return;
+ const carousel=wrapper.querySelector('.people,.gallery,.services,.reviews,.community'), indicators=wrapper.querySelector('.carousel-indicators');
+ if(!carousel||!indicators)return;
+ const originals=[...carousel.children]; if(originals.length<2)return;
+ const makeClone=el=>{const clone=el.cloneNode(true);clone.classList.remove('reveal','is-visible');clone.removeAttribute('data-delay');return clone};
+ originals.forEach(el=>carousel.appendChild(makeClone(el))); originals.slice().reverse().forEach(el=>carousel.insertBefore(makeClone(el),carousel.firstChild));
+ let index=originals.length,itemWidth=0;
+ originals.forEach((_,i)=>{const dot=document.createElement('button');dot.type='button';dot.className='carousel-indicator'+(i===0?' active':'');dot.setAttribute('aria-label','Poziția '+(i+1)+' din '+originals.length);dot.addEventListener('click',()=>{index=originals.length+i;goTo(index);updateIndicators()});indicators.appendChild(dot)});
+ const dots=[...indicators.children];
+ const measure=()=>{const item=carousel.children[index];if(item)itemWidth=item.getBoundingClientRect().width+parseFloat(getComputedStyle(carousel).gap||0)};
+ const goTo=(i,smooth=true)=>{const item=carousel.children[i];if(!item)return;measure();const firstLeft=carousel.children[0].offsetLeft;const targetLeft=item.offsetLeft-firstLeft;carousel.scrollTo({left:targetLeft,behavior:smooth?'smooth':'auto'})};
+ const realIndex=()=>{if(!itemWidth)measure();const firstLeft=carousel.children[0].offsetLeft;return Math.round((carousel.scrollLeft+firstLeft)/itemWidth)};
+ const updateIndicators=()=>{const i=realIndex(),count=originals.length,active=((i%count)+count)%count;dots.forEach((dot,n)=>dot.classList.toggle('active',n===active))};
+ const normalize=()=>{const i=realIndex(),count=originals.length;if(i>=count*2){index=i-count;goTo(index,false)}else if(i<count){index=i+count;goTo(index,false)}else index=i;updateIndicators()};
+ requestAnimationFrame(()=>{goTo(index,false);updateIndicators()});
+ let normalizeTimer,autoplayTimer,resumeTimer,isUserInteracting=false;
+ carousel.addEventListener('scroll',()=>{clearTimeout(normalizeTimer);normalizeTimer=setTimeout(normalize,90);updateIndicators()});
+ const startAutoplay=()=>{clearTimeout(autoplayTimer);clearTimeout(resumeTimer);if(window.innerWidth>=760||window.matchMedia('(prefers-reduced-motion: reduce)').matches||isUserInteracting)return;const tick=()=>{if(window.innerWidth>=760||document.hidden||isUserInteracting)return;const current=realIndex();index=current+1;goTo(index);updateIndicators();autoplayTimer=setTimeout(tick,4200)};autoplayTimer=setTimeout(tick,3000)};
+ const pauseAutoplay=()=>{clearTimeout(autoplayTimer);clearTimeout(resumeTimer)};
+ const resumeAutoplay=()=>{clearTimeout(resumeTimer);resumeTimer=setTimeout(()=>{isUserInteracting=false;startAutoplay()},1200)};
+ carousel.addEventListener('pointerdown',()=>{isUserInteracting=true;pauseAutoplay()});carousel.addEventListener('pointerup',resumeAutoplay);carousel.addEventListener('pointercancel',resumeAutoplay);carousel.addEventListener('pointerleave',()=>{if(isUserInteracting)resumeAutoplay()});
+ document.addEventListener('visibilitychange',()=>{if(document.hidden)pauseAutoplay();else{isUserInteracting=false;startAutoplay()}});
+ window.addEventListener('resize',()=>{measure();goTo(realIndex(),false);updateIndicators();startAutoplay()});startAutoplay();
 });
-
-// Open the native date picker reliably on supported mobile/desktop browsers.
-
-
-// Mobile photo carousels: swipe, seamless looping and position indicators.
-document.querySelectorAll('.photo-carousel').forEach(wrapper => {
-  if (wrapper.classList.contains('stack-carousel')) return;
-  const carousel = wrapper.querySelector('.people, .gallery, .services, .reviews, .community');
-  const indicators = wrapper.querySelector('.carousel-indicators');
-  if (!carousel || !indicators) return;
-
-  const originals = [...carousel.children];
-  if (originals.length < 2) return;
-
-  const makeClone = (el) => {
-    const clone = el.cloneNode(true);
-    clone.classList.remove('reveal', 'is-visible');
-    clone.removeAttribute('data-delay');
-    return clone;
-  };
-
-  originals.forEach(el => carousel.appendChild(makeClone(el)));
-  originals.slice().reverse().forEach(el => carousel.insertBefore(makeClone(el), carousel.firstChild));
-
-  let index = originals.length;
-  let itemWidth = 0;
-
-  originals.forEach((_, i) => {
-    const dot = document.createElement('button');
-    dot.type = 'button';
-    dot.className = 'carousel-indicator' + (i === 0 ? ' active' : '');
-    dot.setAttribute('aria-label', 'Poziția ' + (i + 1) + ' din ' + originals.length);
-    dot.addEventListener('click', () => {
-      index = originals.length + i;
-      goTo(index);
-      updateIndicators();
-    });
-    indicators.appendChild(dot);
-  });
-
-  const dots = [...indicators.children];
-
-  const measure = () => {
-    const item = carousel.children[index];
-    if (item) itemWidth = item.getBoundingClientRect().width + parseFloat(getComputedStyle(carousel).gap || 0);
-  };
-
-  const goTo = (i, smooth = true) => {
-    const item = carousel.children[i];
-    if (!item) return;
-    measure();
-    const firstLeft = carousel.children[0].offsetLeft;
-    const targetLeft = item.offsetLeft - firstLeft;
-    carousel.scrollTo({left: targetLeft, behavior: smooth ? 'smooth' : 'auto'});
-  };
-
-  const realIndex = () => {
-    if (!itemWidth) measure();
-    const firstLeft = carousel.children[0].offsetLeft;
-    return Math.round((carousel.scrollLeft + firstLeft) / itemWidth);
-  };
-
-  const updateIndicators = () => {
-    const i = realIndex();
-    const count = originals.length;
-    const active = ((i % count) + count) % count;
-    dots.forEach((dot, n) => dot.classList.toggle('active', n === active));
-  };
-
-  const normalize = () => {
-    const i = realIndex();
-    const count = originals.length;
-    if (i >= count * 2) {
-      index = i - count;
-      goTo(index, false);
-    } else if (i < count) {
-      index = i + count;
-      goTo(index, false);
-    } else {
-      index = i;
-    }
-    updateIndicators();
-  };
-
-  requestAnimationFrame(() => {
-    goTo(index, false);
-    updateIndicators();
-  });
-
-  let normalizeTimer;
-  let autoplayTimer;
-  let resumeTimer;
-  let isUserInteracting = false;
-
-  carousel.addEventListener('scroll', () => {
-    clearTimeout(normalizeTimer);
-    normalizeTimer = setTimeout(normalize, 90);
-    updateIndicators();
-  });
-
-  const startAutoplay = () => {
-    clearTimeout(autoplayTimer);
-    clearTimeout(resumeTimer);
-    if (window.innerWidth >= 760 || window.matchMedia('(prefers-reduced-motion: reduce)').matches || isUserInteracting) return;
-
-    const tick = () => {
-      if (window.innerWidth >= 760 || document.hidden || isUserInteracting) return;
-      const current = realIndex();
-      index = current + 1;
-      goTo(index);
-      updateIndicators();
-      autoplayTimer = setTimeout(tick, 4200);
-    };
-
-    autoplayTimer = setTimeout(tick, 3000);
-  };
-
-  const pauseAutoplay = () => {
-    clearTimeout(autoplayTimer);
-    clearTimeout(resumeTimer);
-  };
-
-  const resumeAutoplay = () => {
-    clearTimeout(resumeTimer);
-    resumeTimer = setTimeout(() => {
-      isUserInteracting = false;
-      startAutoplay();
-    }, 1200);
-  };
-
-  carousel.addEventListener('pointerdown', () => {
-    isUserInteracting = true;
-    pauseAutoplay();
-  });
-  carousel.addEventListener('pointerup', resumeAutoplay);
-  carousel.addEventListener('pointercancel', resumeAutoplay);
-  carousel.addEventListener('pointerleave', () => {
-    if (isUserInteracting) resumeAutoplay();
-  });
-
-  document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-      pauseAutoplay();
-    } else {
-      isUserInteracting = false;
-      startAutoplay();
-    }
-  });
-
-  window.addEventListener('resize', () => {
-    measure();
-    goTo(realIndex(), false);
-    updateIndicators();
-    startAutoplay();
-  });
-
-  startAutoplay();
+document.querySelectorAll('.stack-carousel').forEach(wrapper=>{
+ const stack=wrapper.querySelector('.community,.services,.reviews'),indicators=wrapper.querySelector('.carousel-indicators'),prev=wrapper.querySelector('.carousel-prev'),next=wrapper.querySelector('.carousel-next');if(!stack||!indicators)return;
+ const cards=[...stack.children];if(cards.length<2)return;cards.forEach((card,i)=>card.classList.add('stack-color-'+((i%6)+1)));
+ let current=0,startX=0,deltaX=0,dragging=false;
+ cards.forEach((_,i)=>{const dot=document.createElement('button');dot.type='button';dot.className='carousel-indicator'+(i===0?' active':'');dot.setAttribute('aria-label','Cardul '+(i+1)+' din '+cards.length);dot.addEventListener('click',()=>show(i));indicators.appendChild(dot)});
+ const dots=[...indicators.children];
+ const render=()=>{const count=cards.length;cards.forEach((card,offset)=>{const pos=(offset-current+count)%count;card.classList.remove('stack-top','stack-middle','stack-back','stack-hidden');if(pos===0)card.classList.add('stack-top');else if(pos===1)card.classList.add('stack-middle');else if(pos===2)card.classList.add('stack-back');else card.classList.add('stack-hidden')});dots.forEach((dot,i)=>dot.classList.toggle('active',i===current))};
+ const show=index=>{current=(index+cards.length)%cards.length;render()};const move=direction=>show(current+direction);
+ prev?.addEventListener('click',()=>move(-1));next?.addEventListener('click',()=>move(1));
+ stack.addEventListener('pointerdown',event=>{if(window.innerWidth>=760)return;dragging=true;startX=event.clientX;deltaX=0;stack.setPointerCapture?.(event.pointerId);cards[current].classList.add('dragging')});
+ stack.addEventListener('pointermove',event=>{if(!dragging||window.innerWidth>=760)return;deltaX=event.clientX-startX;cards[current].style.transform='translateX('+deltaX+'px) rotate('+(deltaX*0.035)+'deg)'});
+ const endDrag=()=>{if(!dragging)return;dragging=false;const card=cards[current];card.classList.remove('dragging');card.style.transform='';if(Math.abs(deltaX)>55)move(deltaX<0?1:-1);else render();deltaX=0};
+ stack.addEventListener('pointerup',endDrag);stack.addEventListener('pointercancel',endDrag);stack.addEventListener('pointerleave',()=>{if(dragging)endDrag()});render();
 });
-
-// Stacked information cards: mobile stack with swipe, tap indicators and a visible peek of the next cards.
-document.querySelectorAll('.stack-carousel').forEach(wrapper => {
-  const stack = wrapper.querySelector('.community, .services, .reviews');
-  const indicators = wrapper.querySelector('.carousel-indicators');
-  const prev = wrapper.querySelector('.carousel-prev');
-  const next = wrapper.querySelector('.carousel-next');
-  if (!stack || !indicators) return;
-
-  const cards = [...stack.children];
-  if (cards.length < 2) return;
-
-  cards.forEach((card, i) => {
-    card.classList.add('stack-color-' + ((i % 6) + 1));
-  });
-
-  let current = 0;
-  let startX = 0;
-  let deltaX = 0;
-  let dragging = false;
-
-  cards.forEach((_, i) => {
-    const dot = document.createElement('button');
-    dot.type = 'button';
-    dot.className = 'carousel-indicator' + (i === 0 ? ' active' : '');
-    dot.setAttribute('aria-label', 'Cardul ' + (i + 1) + ' din ' + cards.length);
-    dot.addEventListener('click', () => show(i));
-    indicators.appendChild(dot);
-  });
-
-  const dots = [...indicators.children];
-
-  const render = () => {
-    const count = cards.length;
-    cards.forEach((card, offset) => {
-      const pos = (offset - current + count) % count;
-      card.classList.remove('stack-top', 'stack-middle', 'stack-back', 'stack-hidden');
-      if (pos === 0) card.classList.add('stack-top');
-      else if (pos === 1) card.classList.add('stack-middle');
-      else if (pos === 2) card.classList.add('stack-back');
-      else card.classList.add('stack-hidden');
-    });
-    dots.forEach((dot, i) => dot.classList.toggle('active', i === current));
-  };
-
-  const show = (index) => {
-    current = (index + cards.length) % cards.length;
-    render();
-  };
-
-  const move = (direction) => show(current + direction);
-
-  prev?.addEventListener('click', () => move(-1));
-  next?.addEventListener('click', () => move(1));
-
-  stack.addEventListener('pointerdown', (event) => {
-    if (window.innerWidth >= 760) return;
-    dragging = true;
-    startX = event.clientX;
-    deltaX = 0;
-    stack.setPointerCapture?.(event.pointerId);
-    cards[current].classList.add('dragging');
-  });
-
-  stack.addEventListener('pointermove', (event) => {
-    if (!dragging || window.innerWidth >= 760) return;
-    deltaX = event.clientX - startX;
-    cards[current].style.transform = 'translateX(' + deltaX + 'px) rotate(' + (deltaX * 0.035) + 'deg)';
-  });
-
-  const endDrag = () => {
-    if (!dragging) return;
-    dragging = false;
-    const card = cards[current];
-    card.classList.remove('dragging');
-    card.style.transform = '';
-    if (Math.abs(deltaX) > 55) move(deltaX < 0 ? 1 : -1);
-    else render();
-    deltaX = 0;
-  };
-
-  stack.addEventListener('pointerup', endDrag);
-  stack.addEventListener('pointercancel', endDrag);
-  stack.addEventListener('pointerleave', () => {
-    if (dragging) endDrag();
-  });
-
-  render();
-});
-
-// Scroll reveal for sections, cards and images.
-const revealItems = document.querySelectorAll('.reveal');
-if (revealItems.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  revealItems.forEach((el, i) => {
-    const group = el.parentElement;
-    if (group) {
-      const siblings = [...group.children].filter(x => x.classList.contains('reveal'));
-      const index = siblings.indexOf(el);
-      if (index >= 0) el.dataset.delay = String(Math.min(index, 5));
-    }
-  });
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
-  revealItems.forEach(el => revealObserver.observe(el));
-} else {
-  revealItems.forEach(el => el.classList.add('is-visible'));
-}
-
+const revealItems=document.querySelectorAll('.reveal');
+if(revealItems.length&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){revealItems.forEach(el=>{const group=el.parentElement;if(group){const siblings=[...group.children].filter(x=>x.classList.contains('reveal'));const index=siblings.indexOf(el);if(index>=0)el.dataset.delay=String(Math.min(index,5))}});const revealObserver=new IntersectionObserver((entries,observer)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}})},{threshold:.12,rootMargin:'0px 0px -30px 0px'});revealItems.forEach(el=>revealObserver.observe(el))}else revealItems.forEach(el=>el.classList.add('is-visible'));
 </script>
 </body></html>
