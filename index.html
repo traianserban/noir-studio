@@ -88,6 +88,14 @@ section{padding:74px 0}.eyebrow{color:var(--accent);font-size:11px;letter-spacin
 .reviews{display:flex;gap:12px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:0 34px 4px}.reviews::-webkit-scrollbar{display:none}.review{flex:0 0 78vw;scroll-snap-align:center}.review{background:#fbf6f0;border:1px solid #d8c8b9;border-radius:18px;padding:20px;color:#2b2420}.stars{color:#e86f45;letter-spacing:.12em;font-size:14px}.review p{line-height:1.65;margin:12px 0 16px;color:#5d5149}.review b{display:block;font-size:14px}.review small{color:#91867e}.rating{margin-top:18px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}.rating strong{font:600 44px "Playfair Display",serif;color:#e86f45}.rating span{font-size:15px;color:#766d66}.rating div{width:100%;color:#766d66;font-size:12px}.community{display:flex;gap:12px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:0 34px 4px}.community::-webkit-scrollbar{display:none}.community-card{flex:0 0 78vw;scroll-snap-align:center}.community-card{border:1px solid #eadfd6;border-radius:18px;padding:22px;background:#fff}.community-card span{font-size:11px;color:#e86f45;font-weight:700}.community-card h3{font:600 25px "Playfair Display",serif;margin:12px 0 8px}.community-card p{color:#766d66;line-height:1.6;font-size:14px}.community-card a{color:#e86f45;font-weight:700;font-size:13px}@media(min-width:760px){.reviews{display:grid;grid-template-columns:repeat(3,1fr);overflow:visible;padding:0}.review{flex:none}.community{display:grid;grid-template-columns:repeat(3,1fr);overflow:visible;padding:0}.community-card{flex:none}}
 }
 @media(max-width:759px){.hero{background-position:center 68%;}}
+/* Corecții desktop: clonele există doar pentru caruselele infinite de mobil. */
+@media(min-width:760px){
+  .photo-carousel:not(.stack-carousel) .carousel-clone{display:none!important}
+  .stack-carousel .community-card.stack-middle > *,
+  .stack-carousel .community-card.stack-back > *{opacity:1}
+}
+/* Numele specialiștilor trebuie să fie lizibile peste fotografii. */
+.person b{color:#fffaf5}
 </style>
 </head>
 <body>
@@ -167,7 +175,7 @@ document.querySelectorAll('.photo-carousel').forEach(wrapper=>{
  const carousel=wrapper.querySelector('.people,.gallery,.services,.reviews,.community'), indicators=wrapper.querySelector('.carousel-indicators');
  if(!carousel||!indicators)return;
  const originals=[...carousel.children]; if(originals.length<2)return;
- const makeClone=el=>{const clone=el.cloneNode(true);clone.classList.remove('reveal','is-visible');clone.removeAttribute('data-delay');return clone};
+ const makeClone=el=>{const clone=el.cloneNode(true);clone.classList.add('carousel-clone');clone.classList.remove('reveal','is-visible');clone.removeAttribute('data-delay');clone.setAttribute('aria-hidden','true');return clone};
  originals.forEach(el=>carousel.appendChild(makeClone(el))); originals.slice().reverse().forEach(el=>carousel.insertBefore(makeClone(el),carousel.firstChild));
  let index=originals.length,itemWidth=0;
  originals.forEach((_,i)=>{const dot=document.createElement('button');dot.type='button';dot.className='carousel-indicator'+(i===0?' active':'');dot.setAttribute('aria-label','Poziția '+(i+1)+' din '+originals.length);dot.addEventListener('click',()=>{index=originals.length+i;goTo(index);updateIndicators()});indicators.appendChild(dot)});
