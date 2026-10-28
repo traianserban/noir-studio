@@ -24,7 +24,14 @@ section{padding:74px 0}.eyebrow{color:var(--accent);font-size:11px;letter-spacin
 .darkband{background:#e7d5c4;border-top:1px solid #d8c8b9;border-bottom:1px solid #d8c8b9}.photo-carousel{position:relative;margin-top:28px}.carousel-arrow{display:none}.carousel-indicators{display:flex;align-items:center;justify-content:center;gap:6px;margin:10px auto 0;height:10px}.carousel-indicator{width:5px;height:5px;border:0;border-radius:999px;background:#9b8f86;padding:0;opacity:.55;transition:width .25s ease,opacity .25s ease,background .25s ease;cursor:pointer}.carousel-indicator.active{width:18px;opacity:1;background:var(--accent)}.people{display:flex;gap:14px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:0 34px 4px}.people::-webkit-scrollbar{display:none}.person{position:relative;flex:0 0 78vw;min-height:260px;border-radius:18px;overflow:hidden;background-size:cover;background-position:center;scroll-snap-align:center}.person:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.88))}.person div{position:absolute;z-index:1;left:16px;bottom:16px}.person b{font:500 22px "Playfair Display",serif}.person span{display:block;color:#eee7df;font-size:12px;margin-top:4px}
 .gallery{display:flex;gap:8px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:0 34px 4px}.gallery::-webkit-scrollbar{display:none}.gallery img{flex:0 0 78vw;width:78vw;height:240px;object-fit:cover;border-radius:14px;display:block;scroll-snap-align:center}.gallery img:first-child{grid-column:auto;height:240px}
 .info{display:grid;gap:12px;margin-top:28px}.infocard{border:1px solid var(--line);border-radius:16px;padding:18px;background:var(--card)}.infocard b{font-size:14px}.infocard p{color:var(--muted);margin:7px 0 0;line-height:1.5;font-size:14px}
-.map-card{margin-top:14px;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#ddd}.map-card iframe{display:block;width:100%;height:320px;border:0}.map-link-wrap{margin-top:14px}
+.map-card{margin-top:14px;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:var(--card)}.map-card iframe{display:block;width:100%;height:320px;border:0}
+.map-placeholder{min-height:260px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:12px;padding:28px 18px}
+.map-placeholder strong{font-size:20px}.map-placeholder p{max-width:560px;font-size:14px;line-height:1.6;color:var(--muted);margin:0}
+.map-consent-panel{max-width:560px;background:var(--bg);border:1px solid var(--line);padding:14px 16px;border-radius:14px}
+.map-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:12px}
+.map-actions button{margin:0}.map-active-actions{display:flex;justify-content:center;padding:14px}
+.map-card [hidden]{display:none!important}.map-link-wrap{margin-top:14px}
+@media(max-width:480px){.map-placeholder{min-height:280px;padding:24px 14px}.map-card iframe{height:280px}.map-actions{width:100%}.map-actions button{width:100%}}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}.reveal.is-visible{opacity:1;transform:none}.reveal[data-delay="1"]{transition-delay:.08s}.reveal[data-delay="2"]{transition-delay:.16s}.reveal[data-delay="3"]{transition-delay:.24s}.reveal[data-delay="4"]{transition-delay:.32s}.reveal[data-delay="5"]{transition-delay:.40s}@media(max-width:759px){.hero{background-position:68% center}}@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}footer{padding:30px 0 42px;border-top:1px solid var(--line);color:#8b8078;font-size:12px}.foot{display:flex;justify-content:space-between;gap:20px}
 .stack-carousel .services,.stack-carousel .reviews{position:relative;height:215px;display:block;overflow:hidden;padding:0 5%;width:100%}
 .stack-carousel .service,.stack-carousel .review{position:absolute;left:5%;right:5%;top:0;width:90%;height:203px;transition:transform .35s ease,opacity .35s ease,box-shadow .35s ease;border:2px solid #8f8176;touch-action:pan-y;cursor:grab;background:#fbf6f0;color:#332a25}
@@ -122,10 +129,24 @@ section{padding:74px 0}.eyebrow{color:var(--accent);font-size:11px;letter-spacin
 <div class="community-card reveal"><span>03</span><h3>Recomandă un prieten</h3><p>Invită pe cineva nou în comunitate și transformați următoarea vizită într-o experiență împreună.</p><a href="#contact">Descoperă →</a></div>
 </div><div class="carousel-indicators" aria-label="Indicatori comunitate"></div><button class="carousel-arrow carousel-next" type="button" aria-label="Card următor">›</button></div></div></section>
 <section id="contact"><div class="wrap"><div class="eyebrow">Ne găsești aici</div><h2 class="title">Ne găsești aici.</h2><div class="info">
-<div class="infocard reveal"><b>Adresă</b><p>Tătărani, Prahova — lângă Ploiești</p></div>
+<div class="infocard reveal"><b>Localizare demonstrativă</b><p>Ploiești, Prahova — zonă orientativă, fără adresă de vizitat.</p></div>
 <div class="infocard reveal"><b>Program</b><p>Luni–Vineri: 09:00–20:00<br>Sâmbătă: 09:00–16:00</p></div>
 <div class="infocard reveal"><b>Contact</b><p>0722 000 000<br>WhatsApp disponibil</p></div></div>
-<div class="map-card reveal"><iframe src="https://www.google.com/maps?q=Tatarani%2C%20Prahova%2C%20Romania&output=embed" title="NOIR Studio - Tătărani, Prahova — lângă Ploiești" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+<div class="map-card reveal" aria-label="Hartă demonstrativă opțională">
+<div class="map-placeholder" id="demoMapPlaceholder">
+<strong>Hartă demonstrativă</strong>
+<p>Ploiești este doar o zonă ilustrativă. NOIR Studio este un concept fictiv, nu o frizerie la această adresă.</p>
+<button class="btn primary" type="button" id="demoMapShow" aria-controls="demoMapConsent">Afișează harta Google Maps</button>
+<div class="map-consent-panel" id="demoMapConsent" hidden>
+<p>Google Maps este un serviciu extern. Dacă alegi să îl afișezi, Google poate primi date tehnice despre conexiune. Harta nu se încarcă fără acordul tău.</p>
+<div class="map-actions"><button type="button" class="btn primary" id="demoMapAgree">Accept și afișez harta</button><button type="button" class="btn secondary" id="demoMapCancel">Nu, mulțumesc</button></div>
+</div>
+</div>
+<div id="demoMapActive" hidden>
+<div id="demoMapFrame"></div>
+<div class="map-active-actions"><button type="button" class="btn secondary" id="demoMapHide">Ascunde harta și retrage acordul</button></div>
+</div>
+</div>
 <div class="map-link-wrap"><a class="btn primary" href="https://wa.me/40722000000" target="_blank" rel="noopener">Scrie pe WhatsApp →</a></div></section>
 </main>
 <div class="booking-modal" id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="bookingTitle"><div class="booking-panel"><h3 id="bookingTitle">Cum vrei să te programezi?</h3><p>Alege varianta care îți este mai comodă. Acesta este un flux demonstrativ pentru NOIR Studio.</p><div class="booking-options"><button class="booking-option primary-booking" type="button" data-demo-booking>Apasă aici pentru programare</button><a class="booking-option" href="tel:0722000000">Sună acum — 0722 000 000</a><a class="booking-option" href="https://wa.me/40722000000" target="_blank" rel="noopener">WhatsApp</a></div><button class="booking-close" type="button" data-close-booking>Închide</button></div></div>
@@ -182,5 +203,52 @@ document.querySelectorAll('.stack-carousel').forEach(wrapper=>{
 });
 const revealItems=document.querySelectorAll('.reveal');
 if(revealItems.length&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){revealItems.forEach(el=>{const group=el.parentElement;if(group){const siblings=[...group.children].filter(x=>x.classList.contains('reveal'));const index=siblings.indexOf(el);if(index>=0)el.dataset.delay=String(Math.min(index,5))}});const revealObserver=new IntersectionObserver((entries,observer)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}})},{threshold:.12,rootMargin:'0px 0px -30px 0px'});revealItems.forEach(el=>revealObserver.observe(el))}else revealItems.forEach(el=>el.classList.add('is-visible'));
+</script>
+<script>
+/* Hartă opțională: iframe-ul Google se creează doar după acord explicit. */
+(() => {
+  const show = document.querySelector('#demoMapShow');
+  const consent = document.querySelector('#demoMapConsent');
+  const agree = document.querySelector('#demoMapAgree');
+  const cancel = document.querySelector('#demoMapCancel');
+  const hide = document.querySelector('#demoMapHide');
+  const placeholder = document.querySelector('#demoMapPlaceholder');
+  const active = document.querySelector('#demoMapActive');
+  const holder = document.querySelector('#demoMapFrame');
+  if (!show || !consent || !agree || !cancel || !hide || !placeholder || !active || !holder) return;
+
+  const reset = () => {
+    holder.replaceChildren(); // Elimină iframe-ul și întrerupe încărcarea Google Maps.
+    active.hidden = true;
+    placeholder.hidden = false;
+    consent.hidden = true;
+    show.hidden = false;
+  };
+  show.addEventListener('click', () => {
+    show.hidden = true;
+    consent.hidden = false;
+    agree.focus();
+  });
+  cancel.addEventListener('click', () => {
+    consent.hidden = true;
+    show.hidden = false;
+    show.focus();
+  });
+  agree.addEventListener('click', () => {
+    const frame = document.createElement('iframe');
+    frame.title = 'Google Maps: zona Ploiești, fără localizare de salon real';
+    frame.loading = 'lazy';
+    frame.referrerPolicy = 'no-referrer';
+    frame.src = 'https://www.google.com/maps?q=Ploiesti%2C%20Romania&z=12&output=embed';
+    holder.replaceChildren(frame);
+    placeholder.hidden = true;
+    active.hidden = false;
+    hide.focus();
+  });
+  hide.addEventListener('click', () => {
+    reset();
+    show.focus();
+  });
+})();
 </script>
 </body></html>
